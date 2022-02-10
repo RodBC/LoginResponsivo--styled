@@ -1,6 +1,7 @@
 import {
   Form,
   Input,
+  Checkbox
 } from 'antd';
 import { MailOutlined, LockOutlined   } from '@ant-design/icons';
 
@@ -30,7 +31,7 @@ export const Login = () => {
               <img src={LoginLogo} alt="login" />
               <p>Faça seu login</p>
               </div>
-              <p className='paragroinicial'>Entre com suas informações de cadastro.</p>
+              <p className='paragrafoinicial'>Entre com suas informações de cadastro.</p>
 
               <FormStyled>
 
@@ -46,10 +47,12 @@ export const Login = () => {
                 <Input.Password className='form-item' placeholder="Digite sua senha" prefix={<img src={Lock} />} />
               </Form.Item>
 
-              {/* <CheckboxStyled>
-                <p className='lembre'>lembre-me</p>
-                <p>esqueci minha senha</p>
-              </CheckboxStyled> */}
+              <div className="senha">
+              <Checkbox className='checkbox'>
+              </Checkbox>
+              <span>Lembre-me</span>
+              <p>Esqueci minha senha</p>
+              </div>
 
               <Enter>
                 Entrar

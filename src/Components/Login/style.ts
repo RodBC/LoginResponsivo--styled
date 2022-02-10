@@ -31,6 +31,13 @@ export const Background = styled.div`
 
 export const InnerLogin = styled.div`
     display: flex;
+    @media (max-width: 1000px){
+        flex-direction: column;
+        font-size: 10px;
+        img{
+            display: none;
+        }
+    }
     justify-content: center;
     align-items: center;
     width: 60%;
@@ -39,6 +46,9 @@ export const InnerLogin = styled.div`
     border-radius: 4px;
     @media (max-width: 1000px){
     background-color: #191816;
+    }
+    .paragrafoinicial{
+        font-weight: 500;
     }
 `
 export const InnerInnerLogin = styled.div`
@@ -64,6 +74,7 @@ export const FormStyled = styled(Form)`
     align-items: center;
     height: 40px;
 }
+
   Input{
       width: 100%;
       background-color: transparent;
@@ -72,23 +83,38 @@ export const FormStyled = styled(Form)`
       box-sizing: border-box;
       height: 30px;
 }
-`
-export const CheckboxStyled = styled(Checkbox)`
-    .lembre{
-    color: #AFB6C2;
-    }
-    font-weight: 600;
-    color: #FFC632;
-    font-size: 14px;
-    gap: 10px;
-    align-items: left;
+    .senha{
+        display: flex;
+        p {
+            margin-left: 130px;
+            display: flex;
+            color: #FFC632;
+        }
+        span{
+            margin-left: 10px;
+        }
+        .checkbox{
+            width: 25px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
+        }
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: #D4CCB6;
+  }
 `
 export const Register = styled.div`
+    justify-content: center;
     display: flex;
     gap: 10px;
     color: #FFC632; 
-    font-size: 20px;
+    font-size: 14px;
     text-align: 'center';
     margin-top: 10px;
     .registre-se{
