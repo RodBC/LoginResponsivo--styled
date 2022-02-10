@@ -2,6 +2,8 @@ import {
   Form,
   Input,
 } from 'antd';
+import { MailOutlined, LockOutlined   } from '@ant-design/icons';
+
 import {
   SideImage,
   LogoCamp,
@@ -12,7 +14,7 @@ import {
   } from '../../Assets';
 
 import React from 'react';
-import { Background, Container, InnerLogin, Logo, InnerInnerLogin, FormStyled } from './style';
+import { Background, Container, InnerLogin, Logo, InnerInnerLogin, FormStyled, CheckboxStyled, Enter, Register } from './style';
 
 export const Login = () => {
   return(
@@ -31,10 +33,34 @@ export const Login = () => {
               <p className='paragroinicial'>Entre com suas informações de cadastro.</p>
 
               <FormStyled>
-                
+
+              <Form.Item
+              label='E-mail'
+              >
+                <Input className='form-item' placeholder="Digite seu e-mail" prefix={<img src={Mail} />} />
+              </Form.Item>
+
+              <Form.Item
+              label='Senha'
+              >
+                <Input.Password className='form-item' placeholder="Digite sua senha" prefix={<img src={Lock} />} />
+              </Form.Item>
+
+              {/* <CheckboxStyled>
+                <p className='lembre'>lembre-me</p>
+                <p>esqueci minha senha</p>
+              </CheckboxStyled> */}
+
+              <Enter>
+                Entrar
+              </Enter>
+
+              <Register>
+                <p>Ainda não tem uma conta?</p>
+                <p className='registre-se'>Registre-se</p>
+              </Register>
+
               </FormStyled>
-
-
             </InnerInnerLogin>
         </InnerLogin>        
       </Background>
